@@ -25,7 +25,7 @@
 
 1. Tampilkan dalam console kalau kode kalkulator yang kamu buat berfungsi dengan memanggil object instance serta fungsi-fungsinya.
 
-### Hints
+### Petunjuk
 
 * Jangan menggunakan object literal
 * Lihat dokumentasi JavaScript di W3School atau MDN
