@@ -2,7 +2,7 @@
 // membuat class kalkulator
 class Kalkulator {
     // membuat constructor
-    constructor(angkaPenjumlahan1,angkaPenjumlahan2,angkaPengurangan1,angkaPengurangan2,angkaPerkalian1,angkaPerkalian2,angkaPembagian1,angkaPembagian2,angkaPangkat2,akarPangkatKuadrat,akarPangkatKibik,pi) {
+    constructor(angkaPenjumlahan1,angkaPenjumlahan2,angkaPengurangan1,angkaPengurangan2,angkaPerkalian1,angkaPerkalian2,angkaPembagian1,angkaPembagian2,angkaPangkat,akarPangkatKuadrat,akarPangkatKibik,pi) {
         this.angkaPenjumlahan1 = angkaPenjumlahan1;
         this.angkaPenjumlahan2 = angkaPenjumlahan2;
         this.angkaPengurangan1 = angkaPengurangan1;
@@ -11,7 +11,7 @@ class Kalkulator {
         this.angkaPerkalian2 = angkaPerkalian2;
         this.angkaPembagian1 = angkaPembagian1;
         this.angkaPembagian2 = angkaPembagian2;
-        this.angkaPangkat2 = angkaPangkat2;
+        this.angkaPangkat = angkaPangkat;
         this.akarPangkatKuadrat = akarPangkatKuadrat;
         this.akarPangkatKibik = akarPangkatKibik;
         this.pi = pi;
@@ -32,9 +32,9 @@ class Kalkulator {
     pembagian() {
         return this.angkaPembagian1 / this.angkaPembagian2;
     }
-    // operasi pangkat 2
-    pangkatKuadrat() {
-        return this.angkaPangkat2 * this.angkaPangkat2;
+    // operasi perpangkat 
+    pangkat(a) {
+        return this.angkaPangkat ** a;
     }
     // operasi akar pangkat 2
     apangkatkuadrat() {
@@ -72,12 +72,13 @@ class Kalkulator {
     }
 }
 
+// output class
 const hasil = new Kalkulator(2, 3, 4, 5, 6, 6,6 ,3 ,7 ,16 , 9, 3.14);
 console.log(`Hasil Penjumlahan : ${hasil.penjumlahan()}`);
 console.log(`Hasil pengurangan : ${hasil.pengurangan()}`);
 console.log(`Hasil perkalian : ${hasil.perkalian()}`);
 console.log(`Hasil Pembagian : ${hasil.pembagian()}`);
-console.log(`Hasil pangkat kuadrat : ${hasil.pangkatKuadrat()}`);
+console.log(`Hasil pangkat : ${hasil.pangkat(2)}`);
 console.log(`Hasil akar kuadrat : ${hasil.apangkatkuadrat()}`);
 console.log(`Hasil akar kibik : ${hasil.aPangkatkibik()}`);
 console.log(`Hasil luas lingkaran : ${hasil.lLingkaran(7)}`);
